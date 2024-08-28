@@ -9,6 +9,19 @@
 // `factorial(2)` to return `2`, and so on.
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
+fn factorial(n: u32) -> u32{
+    let prod: u32;
+    let current: u32 = n;
+    if n <= 1 {
+        prod = 1;
+        return prod;
+    }
+    else {
+        let next = current - 1;
+        let prod_n: u32 = current * factorial(next);
+        return prod_n;
+    }
+}
 
 #[cfg(test)]
 mod tests {
